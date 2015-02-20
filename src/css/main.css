@@ -1,0 +1,60 @@
+.small-img{
+  height: 80px;
+  width:80px;
+}
+
+.btn.active, .btn:active:not(.btn-block){
+  background-color: inherit;
+}
+
+.padding {
+  padding: 10px;
+}
+
+.list h2 {
+  margin: 0px 0px 2px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.list h3 {
+  margin: 0px 0px 4px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.now {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.table-view-cell > a:not(.btn){
+  margin: -11px -100px -11px -15px;
+}
+
+.full-image {
+  width: 100%
+}
+
+.media-body {
+  padding: 18px;
+}
+
+.fav {
+  text-align: center;
+}
+
+.detail .table-view-cell {
+  padding: 11px 15px 11px 15px;
+}
+
+.favLink {
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}

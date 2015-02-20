@@ -1,0 +1,27 @@
+{
+  "name": "flux-immutable-example",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "npm run dev",
+    "build": "./node_modules/.bin/httpster & ./node_modules/.bin/webpack --config ./webpack.config.production.js",
+    "dev": "./node_modules/.bin/httpster & ./node_modules/.bin/webpack --config ./webpack.config.js"
+  },
+  "devDependencies": {
+    "babel-core": "~4.3.0",
+    "babel-loader": "~4.0.0",
+    "httpster": "~1.0.1",
+    "webpack": "~1.5.3",
+    "webpack-dev-server": "~1.7.0"
+  },
+  "dependencies": {
+    "es6-promise": "~2.0.1",
+    "fastclick": "~1.0.6",
+    "flummox": "~2.9.2",
+    "immutable": "~3.6.2",
+    "object-assign": "~2.0.0",
+    "parse": "~1.3.4",
+    "react": "~0.12.2",
+    "react-immutable-render-mixin": "~0.8.0",
+    "react-router": "~0.11.6"
+  }
+}
