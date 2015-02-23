@@ -10,8 +10,7 @@
     "babel-core": "~4.3.0",
     "babel-loader": "~4.0.0",
     "httpster": "~1.0.1",
-    "webpack": "~1.5.3",
-    "webpack-dev-server": "~1.7.0"
+    "webpack": "~1.5.3"
   },
   "dependencies": {
     "es6-promise": "~2.0.1",
@@ -22,6 +21,6 @@
     "parse": "~1.3.4",
     "react": "~0.12.2",
     "react-immutable-render-mixin": "~0.8.0",
-    "react-router": "~0.11.6"
+    "react-router": "~0.12.0"
   }
 }
