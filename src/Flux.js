@@ -16,6 +16,10 @@ class Flux extends Flummox {
 
     this.createStore('searchFramework', SearchFrameworkStore, this);
     this.createStore('framework', FrameworkStore, this);
+
+    this.on('dispatch', function (payload) {
+      console.log('dispatching -> ',  payload);
+    });
   }
 }
 
