@@ -7,23 +7,25 @@ var localStorageUtils = require('../utils/localStorageUtils');
 
 var Framework = Parse.Object.extend('Frameworks', {}, {
   getFrameworks(q) {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         var query = new Parse.Query(Framework);
+
         if (q) {
           query.contains('name', q.toLowerCase());
         }
         query.find({
-          success: function(frameworks) {
+          success: function (frameworks) {
             var favs = localStorageUtils.getAll('favorites');
             resolve({
               response: frameworks.map(framework => {
                 framework.attributes.isFavorited = favs.indexOf(framework.id) > -1;
+
                 return assign({id: framework.id}, framework.attributes);
               }),
               query: q
             });
           },
-          error: function(obj, err) {
+          error: function (obj, err) {
             reject(err);
           }
         });
@@ -31,18 +33,18 @@ var Framework = Parse.Object.extend('Frameworks', {}, {
     },
 
     getFrameworkById(id) {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         var query = new Parse.Query(Framework);
         query.equalTo('objectId', id);
         query.first({
-          success: function(framework) {
+          success: function (framework) {
             var favs = localStorageUtils.getAll('favorites');
             framework.attributes.isFavorited = favs.indexOf(framework.id) > -1;
             resolve({
               response: assign({id: framework.id}, framework.attributes)
             });
           },
-          error: function(obj, err) {
+          error: function (obj, err) {
             reject(err);
           }
         });

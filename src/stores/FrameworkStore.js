@@ -11,8 +11,10 @@ class FrameworkStore extends BaseContentStore {
     super(flux, initialState);
     var frameworksActionIds = flux.getActionIds('framework');
     var favoriteActionIds = flux.getActionIds('favorite');
-    this.registerAsync(frameworksActionIds.searchFrameworks, this.handleBeginAsyncRequest, this.handleSearchframeworkSuccess, this.handleErrorAsyncRequest);
-    this.registerAsync(frameworksActionIds.getFrameworkById, this.handleBeginAsyncRequest, this.handleFrameworkDetailSuccess, this.handleErrorAsyncRequest);
+    this.registerAsync(frameworksActionIds.searchFrameworks, this.handleBeginAsyncRequest,
+      this.handleSearchframeworkSuccess, this.handleErrorAsyncRequest);
+    this.registerAsync(frameworksActionIds.getFrameworkById, this.handleBeginAsyncRequest,
+      this.handleFrameworkDetailSuccess, this.handleErrorAsyncRequest);
     this.register(favoriteActionIds.addFavorite, this.handleAddFavorite);
     this.register(favoriteActionIds.removeFavorite, this.handleRemoveFavorite);
   }
@@ -31,7 +33,7 @@ class FrameworkStore extends BaseContentStore {
   }
 
   handleAddFavorite(id) {
-    var edited = this.state.frameworks.updateIn([id], function(el){
+    var edited = this.state.frameworks.updateIn([id], function (el) {
       return el.set('isFavorited', true);
     });
     this.setState({
@@ -40,7 +42,7 @@ class FrameworkStore extends BaseContentStore {
   }
 
   handleRemoveFavorite(id) {
-    var edited = this.state.frameworks.updateIn([id], function(el){
+    var edited = this.state.frameworks.updateIn([id], function (el) {
       return el.set('isFavorited', false);
     });
     this.setState({

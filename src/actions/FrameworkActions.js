@@ -5,15 +5,15 @@ var FrameworkApi = require('../api/FrameworkApi');
 
 class FrameworkActions extends Actions {
 
-  searchFrameworks(q){
+  searchFrameworks(q) {
     return FrameworkApi.getFrameworks(q);
   }
 
-  newSearch(q){
+  newSearch(q) {
     return q;
   }
 
-  getFrameworkById(id){
+  getFrameworkById(id) {
     return FrameworkApi.getFrameworkById(id);
   }
 }

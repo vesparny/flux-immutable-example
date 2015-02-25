@@ -5,7 +5,8 @@ class SearchFrameworkStore extends BaseLinkedListStore {
   constructor(flux) {
     super(flux);
     var frameworkActionIds = flux.getActionIds('framework');
-    this.registerAsync(frameworkActionIds.searchFrameworks, this.handleBeginAsyncRequest, this.handleSearchFrameworkSuccess, this.handleErrorAsyncRequest);
+    this.registerAsync(frameworkActionIds.searchFrameworks, this.handleBeginAsyncRequest,
+      this.handleSearchFrameworkSuccess, this.handleErrorAsyncRequest);
   }
 
   handleSearchFrameworkSuccess(payload) {

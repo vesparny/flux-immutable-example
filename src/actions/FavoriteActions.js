@@ -5,13 +5,15 @@ var localStorageUtils = require('../utils/localStorageUtils');
 
 class FavoriteActions extends Actions {
 
-  addFavorite(id){
+  addFavorite (id) {
     localStorageUtils.push('favorites', id);
+
     return id;
   }
 
-  removeFavorite(id){
+  removeFavorite (id) {
     localStorageUtils.pop('favorites', id);
+
     return id;
   }
 
