@@ -29,7 +29,7 @@ npm start
 
 then open http://localhost:3333
 
-#### Build for production with Webpack 
+#### Build for production with Webpack
 
 ```shell
 npm run build
@@ -44,7 +44,6 @@ npm run build
 * [Immutable.js](https://github.com/facebook/immutable-js)
 * [react-router](https://github.com/rackt/react-router)
 * [react-immutable-render-mixin](https://www.npmjs.com/package/react-immutable-render-mixin)
-* Persistence uses [Parse](https://parse.com/) and localStorage
 
 #### Useful links
 

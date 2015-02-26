@@ -15,12 +15,12 @@
   "dependencies": {
     "es6-promise": "~2.0.1",
     "fastclick": "~1.0.6",
-    "flummox": "~2.9.2",
+    "flummox": "~2.10.0",
     "immutable": "~3.6.2",
     "object-assign": "~2.0.0",
-    "parse": "~1.3.4",
     "react": "~0.12.2",
     "react-immutable-render-mixin": "~0.8.0",
-    "react-router": "~0.12.0"
+    "react-router": "~0.12.0",
+    "superagent": "~0.21.0"
   }
 }
