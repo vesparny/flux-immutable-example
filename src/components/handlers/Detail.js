@@ -15,7 +15,7 @@ var Detail = React.createClass({
         isLoading: store.isLoading()
       };
     }
-  })], //jshint ignore:line
+  })],
 
   componentDidMount() {
     this.flux.getActions('framework').getFrameworkById(this.getParams().id);

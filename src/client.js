@@ -7,14 +7,7 @@ var App = require('./App');
 var List = require('./components/handlers/List');
 var Detail = require('./components/handlers/Detail');
 var Search = require('./components/handlers/Search');
-
-var Parse = require('parse').Parse;
-var parseAppKey = 'FiHelgc4CWq8IHAS6d3P5Nwd5BYkV8BirQgUnkco';
-var parseJsKey = 'cwahucmFXp3tHCvALe29ncImpd41mXa3qaukLdlF';
-Parse.initialize(parseAppKey, parseJsKey);
-
-var Flux = require('./Flux');
-var flux = new Flux();
+var flux = new (require('./Flux'))();
 
 // Expose globally
 window.React = React;
@@ -31,7 +24,7 @@ var routes = (
 );
 
 Router.run(routes, function (Handler, state) { // jshint unused:false
-  React.withContext({ flux }, function() {
-    React.render(<Handler />, document.body);
+  React.withContext({flux}, function() {
+    React.render(<Handler />, document.getElementById('app'));
   });
 });
