@@ -1,5 +1,7 @@
 {
   "name": "flux-immutable-example",
+  "repository": "https://github.com/vesparny/flux-immutable-example",
+  "description": "A trivial example app with flux, flummox, react-router, webpack and Immutable.js",
   "version": "0.0.0",
   "scripts": {
     "start": "npm run dev",

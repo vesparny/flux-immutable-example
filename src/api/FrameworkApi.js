@@ -1,12 +1,11 @@
 'use strict';
 
 var Promise = require('es6-promise').Promise; // jshint ignore:line
-var Parse = require('parse').Parse;
 var assign = require('object-assign');
 var localStorageUtils = require('../utils/localStorageUtils');
 var ApiUtils = require('../utils/ApiUtils');
 
-var Framework = Parse.Object.extend('Frameworks', {}, {
+var FrameworkApi = {
   getFrameworks(q = '') {
       return new Promise(function (resolve, reject) {
         ApiUtils.get('frameworks.json', {q}).then(function (res) {
@@ -46,7 +45,6 @@ var Framework = Parse.Object.extend('Frameworks', {}, {
           });
         });
       }
+};
 
-});
-
-module.exports = Framework;
+module.exports = FrameworkApi;
