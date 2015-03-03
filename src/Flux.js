@@ -20,6 +20,9 @@ class Flux extends Flummox {
     this.on('dispatch', function (payload) {
       console.log('dispatching -> ',  payload);
     });
+    this.on('error', function (err) {
+      console.error(err.stack);
+    });
   }
 }
 

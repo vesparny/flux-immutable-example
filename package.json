@@ -17,7 +17,7 @@
   "dependencies": {
     "es6-promise": "~2.0.1",
     "fastclick": "~1.0.6",
-    "flummox": "~2.11.0",
+    "flummox": "~2.12.4",
     "immutable": "~3.6.2",
     "object-assign": "~2.0.0",
     "react": "~0.12.2",
