@@ -73,7 +73,6 @@
     "allowUrlComments": true
   },
   "requireCapitalizedConstructors": true,
-  "safeContextKeyword": "_this",
   "requireDotNotation": true,
   "requireSpaceAfterLineComment": true,
   "validateParameterSeparator": ", ",

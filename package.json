@@ -20,11 +20,10 @@
   "dependencies": {
     "fastclick": "~1.0.6",
     "flummox": "~2.12.4",
-    "immutable": "~3.6.2",
-    "object-assign": "~2.0.0",
-    "react": "~0.12.2",
+    "immutable": "~3.6.4",
+    "react": "~0.13.1",
     "react-immutable-render-mixin": "~0.8.0",
-    "react-router": "~0.12.4",
-    "superagent": "~0.21.0"
+    "react-router": "~0.13.2",
+    "superagent": "~1.1.0"
   }
 }
