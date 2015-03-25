@@ -1,11 +1,11 @@
 'use strict';
 
-var Promise = require('es6-promise').Promise; // jshint ignore:line
-var request = require('superagent');
-var timeout = 10000;
+let Promise = require('es6-promise').Promise; // jshint ignore:line
+let request = require('superagent');
+let timeout = 10000;
 
 function makeCall (method, url, data = {}) {
-  var req = request[method](url)
+  let req = request[method](url)
     .set('Accept', 'application/json')
     .timeout(timeout);
 
@@ -30,7 +30,7 @@ function makeCall (method, url, data = {}) {
     });
   });
 }
-var ApiUtils = {
+let ApiUtils = {
   get(url, data) {
       return makeCall('get', url, data);
     },

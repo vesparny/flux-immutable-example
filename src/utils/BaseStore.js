@@ -1,5 +1,6 @@
 'use strict';
-var { Store } = require('flummox');
+
+let { Store } = require('flummox');
 
 class BaseStore extends Store {
   constructor(flux, initialState) {
@@ -8,15 +9,15 @@ class BaseStore extends Store {
   }
 
   handleBeginAsyncRequest() {
-    this.setState({ isLoading: true });
+    this.setState({isLoading: true});
   }
 
   handleErrorAsyncRequest(err) {
-    this.setState({ isLoading: false });
+    this.setState({isLoading: false});
     console.log(err);
   }
 
-  isLoading(){
+  isLoading() {
     return this.state.isLoading;
   }
 }

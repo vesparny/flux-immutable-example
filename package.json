@@ -10,12 +10,14 @@
   },
   "devDependencies": {
     "babel-core": "~4.3.0",
+    "babel-eslint": "^2.0.2",
     "babel-loader": "~4.0.0",
+    "eslint": "^0.17.1",
+    "eslint-plugin-react": "^1.6.1",
     "httpster": "~1.0.1",
     "webpack": "~1.5.3"
   },
   "dependencies": {
-    "es6-promise": "~2.0.1",
     "fastclick": "~1.0.6",
     "flummox": "~2.12.4",
     "immutable": "~3.6.2",

@@ -1,16 +1,16 @@
 'use strict';
-var Immutable = require('immutable');
-var BaseContentStore = require('../utils/BaseContentStore');
+let Immutable = require('immutable');
+let BaseContentStore = require('../utils/BaseContentStore');
 
 class FrameworkStore extends BaseContentStore {
   constructor(flux) {
-    var initialState = {
+    let initialState = {
       frameworks: Immutable.Map(),
       isLoading: false
     };
     super(flux, initialState);
-    var frameworksActionIds = flux.getActionIds('framework');
-    var favoriteActionIds = flux.getActionIds('favorite');
+    let frameworksActionIds = flux.getActionIds('framework');
+    let favoriteActionIds = flux.getActionIds('favorite');
     this.registerAsync(frameworksActionIds.searchFrameworks, this.handleBeginAsyncRequest,
       this.handleSearchframeworkSuccess, this.handleErrorAsyncRequest);
     this.registerAsync(frameworksActionIds.getFrameworkById, this.handleBeginAsyncRequest,
@@ -27,13 +27,13 @@ class FrameworkStore extends BaseContentStore {
 
   handleFrameworkDetailSuccess(payload) {
     this.setState({
-      frameworks:  this.addOneToBag(this.state.frameworks, payload.response),
+      frameworks: this.addOneToBag(this.state.frameworks, payload.response),
       isLoading: false
     });
   }
 
   handleAddFavorite(id) {
-    var edited = this.state.frameworks.updateIn([id], function (el) {
+    let edited = this.state.frameworks.updateIn([id], function (el) {
       return el.set('isFavorited', true);
     });
     this.setState({
@@ -42,7 +42,7 @@ class FrameworkStore extends BaseContentStore {
   }
 
   handleRemoveFavorite(id) {
-    var edited = this.state.frameworks.updateIn([id], function (el) {
+    let edited = this.state.frameworks.updateIn([id], function (el) {
       return el.set('isFavorited', false);
     });
     this.setState({

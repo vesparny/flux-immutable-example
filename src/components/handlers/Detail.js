@@ -1,15 +1,14 @@
 'use strict';
 
-var React = require('react');
-var FluxMixin = require('flummox/mixin');
-var FrameworkDetail = require('../FrameworkDetail');
+let React = require('react');
+let FluxMixin = require('flummox/mixin');
+let FrameworkDetail = require('../FrameworkDetail');
 
-var { State} = require('react-router');
+let { State} = require('react-router');
 
-//jshint newcap:false
-var Detail = React.createClass({
+let Detail = React.createClass({
   mixins: [State, FluxMixin({
-    framework:function(store){
+    framework: function (store) {
       return {
         framework: store.getById(this.getParams().id),
         isLoading: store.isLoading()
@@ -22,11 +21,11 @@ var Detail = React.createClass({
   },
 
   render() {
-    var { framework, isLoading } = this.state;
-    if (isLoading){
+    let { framework, isLoading } = this.state;
+    if (isLoading) {
       return <div className="padding"><span>Loading...</span></div>;
     }
-    if (!framework){
+    if (!framework) {
       return <div className="padding"><span>Nothing to display</span></div>;
     }
     return (

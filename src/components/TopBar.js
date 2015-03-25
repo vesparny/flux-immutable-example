@@ -1,17 +1,17 @@
 'use strict';
 
-var React = require('react');
-var { PropTypes } = React;
-var { Link } = require('react-router');
+let React = require('react');
+let { PropTypes } = React;
+let { Link } = require('react-router');
 
-var TopBar = React.createClass({
+let TopBar = React.createClass({
 
   propTypes: {
     pathName: PropTypes.string.isRequired
   },
 
   render() {
-    var pathName = this.props.pathName;
+    let pathName = this.props.pathName;
     return (
       <header className="bar bar-nav">
       {

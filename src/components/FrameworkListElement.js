@@ -1,11 +1,11 @@
 'use strict';
 
-var React = require('react');
-var { PropTypes } = React;
-var { Link } = require('react-router');
-var ImmutableRenderMixin = require('react-immutable-render-mixin');
+let React = require('react');
+let { PropTypes } = React;
+let { Link } = require('react-router');
+let ImmutableRenderMixin = require('react-immutable-render-mixin');
 
-var FrameworkListElement = React.createClass({
+let FrameworkListElement = React.createClass({
 
   mixins: [ImmutableRenderMixin],
 
@@ -14,7 +14,7 @@ var FrameworkListElement = React.createClass({
   },
 
   render() {
-    var { framework } = this.props;
+    let { framework } = this.props;
     return (
       <li className="table-view-cell media">
         <Link to="detail" params={{id: framework.id}}>

@@ -1,12 +1,12 @@
 'use strict';
 
-var { Flummox } =  require('flummox');
+let { Flummox } = require('flummox');
 
-var FrameworkActions = require('./actions/FrameworkActions');
-var FavoriteActions = require('./actions/FavoriteActions');
+let FrameworkActions = require('./actions/FrameworkActions');
+let FavoriteActions = require('./actions/FavoriteActions');
 
-var FrameworkStore = require('./stores/FrameworkStore');
-var SearchFrameworkStore = require('./stores/SearchFrameworkStore');
+let FrameworkStore = require('./stores/FrameworkStore');
+let SearchFrameworkStore = require('./stores/SearchFrameworkStore');
 
 class Flux extends Flummox {
   constructor() {
@@ -18,7 +18,7 @@ class Flux extends Flummox {
     this.createStore('framework', FrameworkStore, this);
 
     this.on('dispatch', function (payload) {
-      console.log('dispatching -> ',  payload);
+      console.log('dispatching -> ', payload);
     });
     this.on('error', function (err) {
       console.error(err.stack);

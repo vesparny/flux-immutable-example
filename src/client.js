@@ -1,21 +1,23 @@
 'use strict';
+/* eslint no-undef:0 */
+/* eslint no-unused-vars:0 */
 
-var React = require('react');
-var Router = require('react-router');
-var { Route, DefaultRoute } = Router;
-var App = require('./App');
-var List = require('./components/handlers/List');
-var Detail = require('./components/handlers/Detail');
-var Search = require('./components/handlers/Search');
-var flux = new (require('./Flux'))();
+let React = require('react');
+let Router = require('react-router');
+let { Route, DefaultRoute } = Router;
+let App = require('./App');
+let List = require('./components/handlers/List');
+let Detail = require('./components/handlers/Detail');
+let Search = require('./components/handlers/Search');
+let flux = new (require('./Flux'))();
 
 // Expose globally
 window.React = React;
 
-var FastClick = require('fastclick');
+let FastClick = require('fastclick');
 FastClick.attach(document.body);
 
-var routes = (
+let routes = (
   <Route name='explore' path='/' handler={App}>
     <Route name='list' path='/frameworks' handler={List} />
     <Route name='detail' path='/frameworks/:id' handler={Detail} />
@@ -23,8 +25,8 @@ var routes = (
   </Route>
 );
 
-Router.run(routes, function (Handler, state) { // jshint unused:false
-  React.withContext({flux}, function() {
+Router.run(routes, function (Handler, state) {
+  React.withContext({flux}, function () {
     React.render(<Handler />, document.getElementById('app'));
   });
 });

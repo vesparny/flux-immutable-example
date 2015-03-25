@@ -1,10 +1,10 @@
 'use strict';
 
-var React = require('react');
-var { Navigation } = require('react-router');
-var LinkedStateMixin = require('react/lib/LinkedStateMixin');
+let React = require('react');
+let { Navigation } = require('react-router');
+let LinkedStateMixin = require('react/lib/LinkedStateMixin');
 
-var Search = React.createClass({
+let Search = React.createClass({
   mixins: [LinkedStateMixin, Navigation],
 
   getInitialState() {

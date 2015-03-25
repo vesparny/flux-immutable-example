@@ -1,13 +1,13 @@
 'use strict';
 
-var React = require('react');
-var { RouteHandler } = require('react-router');
-var TopBar = require('./components/TopBar');
-var { State } = require('react-router');
+let React = require('react');
+let { RouteHandler } = require('react-router');
+let TopBar = require('./components/TopBar');
+let { State } = require('react-router');
 
-var App = React.createClass({
+let App = React.createClass({
 
-  mixins: [ State ],
+  mixins: [State],
 
   render() {
     return (

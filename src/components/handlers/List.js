@@ -1,14 +1,13 @@
 'use strict';
 
-var React = require('react');
-var FrameworkListElement = require('../FrameworkListElement');
-var FluxMixin = require('flummox/mixin');
-var { State} = require('react-router');
+let React = require('react');
+let FrameworkListElement = require('../FrameworkListElement');
+let FluxMixin = require('flummox/mixin');
+let { State} = require('react-router');
 
-var List = React.createClass({
-  //jshint newcap:false
+let List = React.createClass({
   mixins: [State, FluxMixin({
-    searchFramework: function(store){
+    searchFramework: function (store) {
       return {
         frameworks: store.getframeworks(this.getQuery().q),
         isLoading: store.isLoading()
@@ -21,11 +20,11 @@ var List = React.createClass({
   },
 
   render() {
-    var { frameworks, isLoading } = this.state;
-    if (isLoading){
+    let { frameworks, isLoading } = this.state;
+    if (isLoading) {
       return <div className="padding"><span>Loading...</span></div>;
     }
-    if (frameworks.size === 0){
+    if (frameworks.size === 0) {
       return <div className="padding"><span>Try another search</span></div>;
     }
     return (

@@ -1,14 +1,14 @@
 'use strict';
 
-var ArrayUtils = require('./ArrayUtils');
+let ArrayUtils = require('./ArrayUtils');
 
-function getAll(key) {
+function getAll (key) {
   return JSON.parse(window.localStorage.getItem(key)) || [];
 }
 
-var LocalStorageUtils = {
+let LocalStorageUtils = {
   push(key, value) {
-      var data = getAll(key);
+      let data = getAll(key);
       if (data.indexOf(value) === -1) {
         data.push(value);
         window.localStorage.setItem(key, JSON.stringify(data));
@@ -16,12 +16,12 @@ var LocalStorageUtils = {
       return data;
     },
     pop(key, value) {
-      var data = getAll(key);
+      let data = getAll(key);
       ArrayUtils.remove(data, value);
       window.localStorage.setItem(key, JSON.stringify(data));
       return data;
     },
-    getAll(key){
+    getAll(key) {
       return JSON.parse(window.localStorage.getItem(key)) || [];
     }
 };

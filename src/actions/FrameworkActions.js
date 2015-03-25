@@ -1,7 +1,7 @@
 'use strict';
 
-var { Actions } = require('flummox');
-var FrameworkApi = require('../api/FrameworkApi');
+let { Actions } = require('flummox');
+let FrameworkApi = require('../api/FrameworkApi');
 
 class FrameworkActions extends Actions {
 

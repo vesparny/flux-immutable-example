@@ -1,10 +1,11 @@
 'use strict';
-var BaseStore = require('./BaseStore');
-var Immutable = require('immutable');
+
+let BaseStore = require('./BaseStore');
+let Immutable = require('immutable');
 
 class BaseLinkedListStore extends BaseStore {
   constructor(flux) {
-    var initialState = {
+    let initialState = {
       list: Immutable.Map(),
       isLoading: true
     };

@@ -1,13 +1,12 @@
 'use strict';
 
-var { Actions } = require('flummox');
-var localStorageUtils = require('../utils/localStorageUtils');
+let { Actions } = require('flummox');
+let localStorageUtils = require('../utils/localStorageUtils');
 
 class FavoriteActions extends Actions {
 
   addFavorite (id) {
     localStorageUtils.push('favorites', id);
-
     return id;
   }
 

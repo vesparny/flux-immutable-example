@@ -1,0 +1,27 @@
+{
+  "ecmaFeatures": {
+    "jsx": true,
+    "destructuring": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "eol-last": 2,
+    "no-underscore-dangle": [0],
+    "no-var": 2,
+    "quotes": [2, "single"],
+    "strict": 2,
+    "new-cap": 0,
+    "react/jsx-quotes": 1,
+    "react/jsx-no-undef": 1,
+    "react/jsx-uses-vars": 1,
+    "react/prop-types": 1,
+  },
+  "plugins": [
+    "react"
+  ]
+}

@@ -1,10 +1,10 @@
 'use strict';
 
-var React = require('react');
-var { PropTypes } = React;
-var ImmutableRenderMixin = require('react-immutable-render-mixin');
+let React = require('react');
+let { PropTypes } = React;
+let ImmutableRenderMixin = require('react-immutable-render-mixin');
 
-var FrameworkDetailElement = React.createClass({
+let FrameworkDetailElement = React.createClass({
 
   mixins: [ImmutableRenderMixin],
 
@@ -15,7 +15,7 @@ var FrameworkDetailElement = React.createClass({
   },
 
   render() {
-    var framework = this.props.framework.toJS();
+    let framework = this.props.framework.toJS();
     return (
       <div className="detail">
         <ul className="table-view">
@@ -35,23 +35,23 @@ var FrameworkDetailElement = React.createClass({
         {
           framework.isFavorited ?
             <div className="fav">
-              <a onClick={this.props.onRemoveFromFavoritesClick.bind(null, framework.id)} className="favLink">
+              <a onClick={this.props.onRemoveFromFavoritesClick
+                .bind(null, framework.id)} className="favLink">
                 <span className="icon icon-star-filled"></span>
                 <span className="tab-label">Remove from Favs</span>
               </a>
             </div> :
             <div className="fav">
-              <a onClick={this.props.onAddToFavoritesClick.bind(null, framework.id)} className="favLink">
+              <a onClick={this.props.onAddToFavoritesClick
+                .bind(null, framework.id)} className="favLink">
                 <span className="icon icon-star-filled"></span>
                 <span className="tab-label">Add to Favs</span>
               </a>
             </div>
         }
-
       </div>
     );
   }
-
 });
 
 module.exports = FrameworkDetailElement;
